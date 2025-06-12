@@ -56,10 +56,16 @@ export default function Navbar() {
               COMMUNITY
             </button>
             <button
-              onClick={handleNav("/home/event")}
+              onClick={handleNav("/home/workshop")}
               className="hover:text-white cursor-pointer"
             >
-              EVENT
+              WORKSHOP
+            </button>
+            <button
+              onClick={handleNav("/home/run")}
+              className="hover:text-white text-white font-bold fill-white cursor-pointer"
+            >
+              RUN
             </button>
           </nav>
         </div>

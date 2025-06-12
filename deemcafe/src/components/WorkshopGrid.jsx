@@ -25,11 +25,11 @@ const workshopItems = [
   },
 ];
 
-export default function WorkshopGrid({ onlyTwo = false }) {
+export default function WorkshopGrid({ col = "2" }) {
   return (
     <section className="bg-[#1a1a1a] px-6 py-12">
       <div
-        className={`grid gap-8 max-w-6xl mx-auto ${"grid-cols-1 sm:grid-cols-2"}`}
+        className={`grid gap-8 max-w-6xl mx-auto grid-cols-${col} sm:grid-cols-${col}`}
       >
         {workshopItems.map((item, index) => (
           <WorkshopCard key={index} {...item} />
