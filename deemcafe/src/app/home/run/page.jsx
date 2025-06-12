@@ -8,9 +8,41 @@ import menu from "@/assets/menu.png";
 import banner1 from "@/assets/bannerWorkshop.png";
 import banner2 from "@/assets/bannerWorkshop1.png";
 import WorkshopGrid from "@/components/WorkshopGrid";
-import runBanner from "@/assets/runDeem.png"
+import runBanner from "@/assets/runDeem.png";
+import MilestoneProgress from "@/components/MilestoneProgress";
+import workshopPic from "@/assets/gapBong.png";
+import TotalPoints from "@/components/TotalPoints";
 
-export default function MenuPage() {
+const runItems = [
+  {
+    image: workshopPic,
+    title: "50 KM",
+    description:
+      "Dạ Yến cho người kiên trì hoàn thành chặng 50 KM",
+    buttonText: "Nhận Quà",
+  },
+   {
+    image: workshopPic,
+    title: "50 KM",
+    description:
+      "Dạ Yến cho người kiên trì hoàn thành chặng 50 KM",
+    buttonText: "Nhận Quà",
+  }, {
+    image: workshopPic,
+    title: "50 KM",
+    description:
+      "Dạ Yến cho người kiên trì hoàn thành chặng 50 KM",
+    buttonText: "Nhận Quà",
+  }, {
+    image: workshopPic,
+    title: "50 KM",
+    description:
+      "Dạ Yến cho người kiên trì hoàn thành chặng 50 KM",
+    buttonText: "Nhận Quà",
+  },
+];
+
+export default function RunPage() {
   return (
     // <section className="w-full px-6 md:px-20 py-12 bg-black text-white">
     //   <div className="min-h-screen bg-[#242424] text-white">
@@ -34,8 +66,10 @@ export default function MenuPage() {
 
     <div className="min-h-screen bg-[#242424] text-white">
       <Image src={runBanner} alt="" className="= w-full object-contain" />
-      <main className="px-4 md:px-20">
-        <WorkshopGrid col={"4"} />
+      <main className=" md:px-20 bg-black px-6 py-12">
+        <MilestoneProgress currentKM={250} />
+        <WorkshopGrid col={"4"} items={runItems}/>
+        <TotalPoints points={2345} />
       </main>
     </div>
   );

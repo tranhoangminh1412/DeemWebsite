@@ -8,7 +8,7 @@ export default function MilestoneProgress({ currentKM }) {
       </h2>
       <div className="bg-gray-300 rounded-full h-6 overflow-hidden">
         <div
-          className="bg-green-600 h-full transition-all duration-300"
+          className="bg-[#8DA650] h-full transition-all duration-300"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
