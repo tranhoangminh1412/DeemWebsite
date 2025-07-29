@@ -3,11 +3,11 @@
 import React from "react";
 import KhungNganFooter from "@/assets/KhungNganFooter.jpg";
 import Image from "next/image";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "@/components/old/AboutCard";
 import spotlightImg from "@/assets/DeemSpotlightImg.png";
-import HeroCard from "@/components/HeroCard";
-import HeroCarousel from "@/components/HeroComponent";
-import DrinkGrid from "@/components/DrinkGrid";
+import HeroCard from "@/components/old/HeroCard";
+import HeroCarousel from "@/components/old/HeroComponent";
+import DrinkGrid from "@/components/old/DrinkGrid";
 
 const aboutContent = {
   heading: "VỀ CHÚNG TÔI",

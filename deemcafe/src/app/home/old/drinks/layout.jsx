@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { AuthProvider } from "@/contexts/authContext";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/old/Navbar";
+import Footer from "@/components/old/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function AboutLayout({ children }) {
   return (
-      <div
+    <div
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Wrap the page content with AuthProvider */}

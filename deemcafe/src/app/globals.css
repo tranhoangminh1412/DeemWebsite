@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "PF BEAU SANS FS";
+  src: url("/deemcafe/public/fonts/PFBEAUSANS/FSPFBeauSansPro-Bbook.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF BEAU SANS FS";
+  src: url("/deemcafe/public/fonts/PFBEAUSANS/FSPFBeauSansPro-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@theme{
+  --font-display: "beauSans", "sans-serif";
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

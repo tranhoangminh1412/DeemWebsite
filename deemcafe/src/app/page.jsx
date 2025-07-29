@@ -1,36 +1,37 @@
-// app/page.jsx or pages/index.jsx depending on your Next.js structure
 "use client";
-
-import React from "react";
-import HeroCard from "@/components/HeroCard";
-import DrinkImageSliderCard from "@/components/DrinkFeatureCard";
+import Image from "next/image";
+import bgImage from "@/assets/homeBackground.png"; 
+import Navbar from "@/components/Navbar";
+import HeroText from "@/components/HeroText";
+import HeroContent from "@/components/HeroContent";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#242424] text-white">
-      <main className="px-4 md:px-20">
-        <section className="flex flex-col gap-24 max-w-6xl mx-auto mt-[6%] pb-30">
-          <HeroCard
-            image="/../app/deemAmbient.png"
-            title="VỀ DEEM"
-            description="DEEM và hành trình tìm về sự bình yên trong tâm hồn"
-            buttonText="TÌM HIỂU THÊM"
-          />
-          <HeroCard
-            image="/images/drink_story.jpg"
-            title="CÂU CHUYỆN ĐỒ UỐNG"
-            description="DEEM và hành trình tìm về sự bình yên trong tâm hồn"
-            buttonText="TÌM HIỂU THÊM"
-          />
-          <HeroCard
-            image="/images/drink_story.jpg"
-            title="CỘNG ĐỒNG"
-            description="DEEM và hành trình tìm về sự bình yên trong tâm hồn"
-            buttonText="TÌM HIỂU THÊM"
-          />
-          <DrinkImageSliderCard />
-        </section>
-      </main>
+    <div className="relative w-screen h-screen overflow-hidden">
+      {/* Background image */}
+      <Image
+        src={bgImage}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        priority
+      />
+
+      {/* Overlay Content */}
+      <div className="absolute inset-0 flex flex-col justify-between z-10">
+       
+       <div></div>
+
+        {/* Hero Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-6 pb-10 gap-6 md:gap-0">
+          <HeroText />
+          <HeroContent />
+        </div>
+      </div>
+
+      {/* Optional dark overlay */}
+      <div className="absolute inset-0 bg-black/30 z-0" />
     </div>
   );
 }

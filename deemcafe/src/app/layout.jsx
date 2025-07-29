@@ -3,9 +3,9 @@ import "./globals.css";
 
 import { AuthProvider } from "@/contexts/authContext";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/old/Footer";
 import Image from "next/image";
-import KhungNganFooter from "@/assets/KhungNganFooter.jpg"
+import KhungNganFooter from "@/assets/KhungNganFooter.jpg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,15 +30,12 @@ export default function RootLayout({ children }) {
       >
         {/* Wrap the page content with AuthProvider */}
         <AuthProvider>
-          <div className="min-h-screen bg-[#242424] text-white">
-            <Navbar />
+          <div className="min-h-screen bg-transparent text-white">
+            <div className="flex w-full">
+              <Navbar />
+            </div>
             {children}
-            <Image
-              src={KhungNganFooter}
-              className="w-full object-cover"
-              alt="Footer"
-            />
-            <Footer />{" "}
+            
           </div>
         </AuthProvider>
       </body>

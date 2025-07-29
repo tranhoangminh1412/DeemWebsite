@@ -3,7 +3,7 @@
 import React from "react";
 import KhungNganFooter from "@/assets/KhungNganFooter.jpg";
 import Image from "next/image";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "@/components/old/AboutCard";
 import spotlightImg from "@/assets/DeemSpotlightImg.png";
 
 const aboutContent = {

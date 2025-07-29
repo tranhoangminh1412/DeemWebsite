@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "@/components/old/AboutCard";
 import spotlightImg from "@/assets/DeemSpotlightImg.png";
 import menu from "@/assets/menu.png";
 

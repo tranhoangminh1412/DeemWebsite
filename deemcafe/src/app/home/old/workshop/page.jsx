@@ -2,12 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import AboutCard from "@/components/AboutCard";
+import AboutCard from "@/components/old/AboutCard";
 import spotlightImg from "@/assets/DeemSpotlightImg.png";
 import menu from "@/assets/menu.png";
 import banner1 from "@/assets/bannerWorkshop.png";
 import banner2 from "@/assets/bannerWorkshop1.png";
-import WorkshopGrid from "@/components/WorkshopGrid";
+import WorkshopGrid from "@/components/old/WorkshopGrid";
 
 export default function MenuPage() {
   return (

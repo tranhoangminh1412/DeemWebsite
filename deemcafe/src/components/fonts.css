@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: 'BEAUSANS';
+    src: local('PF Beau Sans Pro Black'), local('PF-Beau-Sans-Pro-Black'),
+        url('/fonts/PFBEAUSANS/PFBeauSansPro-Black.woff2') format('woff2'),
+        url('/fonts/PFBEAUSANS/PFBeauSansPro-Black.woff') format('woff'),
+        url('/fonts/PFBEAUSANS/PFBeauSansPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+div{
+    font-family: "BEAUSANS";    
+}

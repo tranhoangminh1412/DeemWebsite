@@ -1,81 +1,18 @@
-"use client";
-
+'use client';
 import React from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import logo from "@/assets/logoDeem.png";
+import logo from "@/assets/Logo.png"
 
 export default function Navbar() {
-  const router = useRouter();
-
-  const handleNav = (path) => () => {
-    console.log(path);
-    router.push(path);
-  };
-
   return (
-    <header className="bg-transparent pt-[34px] pb-[34px]">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
-        <div className="flex items-center gap-6">
-          <span
-            onClick={() => {
-              router.push("/");
-            }}
-            className="text-2xl font-bold text-white cursor-pointer"
-          >
-            <Image
-              priority
-              className="max-w-40 max-h-fit"
-              src={logo}
-              alt="DEEM Logo"
-            />
-          </span>
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-white/80 select-none">
-            <button
-              onClick={handleNav("/home/about")}
-              className="hover:text-white cursor-pointer"
-            >
-              VỀ CHÚNG TÔI
-            </button>
-            <button
-              onClick={handleNav("/home/drinks")}
-              className="hover:text-white cursor-pointer"
-            >
-              ĐỒ UỐNG
-            </button>
-            <button
-              onClick={handleNav("/home/membership")}
-              className="hover:text-white cursor-pointer"
-            >
-              THẺ TRẢ PHÍ
-            </button>
-            <button
-              onClick={handleNav("/home/community")}
-              className="hover:text-white cursor-pointer"
-            >
-              COMMUNITY
-            </button>
-            <button
-              onClick={handleNav("/home/workshop")}
-              className="hover:text-white cursor-pointer"
-            >
-              WORKSHOP
-            </button>
-            <button
-              onClick={handleNav("/home/run")}
-              className="hover:text-white text-white font-bold fill-white cursor-pointer"
-            >
-              RUN
-            </button>
-          </nav>
-        </div>
-        <button
-          onClick={handleNav("/auth/login")}
-          className="bg-white text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-gray-200 transition cursor-pointer"
-        >
-          ĐĂNG NHẬP
-        </button>
+    <nav className="absolute top-0 left-0 right-0 flex justify-between items-center text-sm font-medium px-6 pt-6 pb-6 text-white z-20 backdrop-blur-md w-full">
+      <Image src={logo} alt=""/>
+      <div className="hidden md:flex gap-8 font-[beauSans]">
+        <a href="#" className="hover:text-white/80">VỀ CHÚNG TÔI</a>
+        <a href="#" className="hover:text-white/80">SẢN PHẨM</a>
+        <a href="#" className="hover:text-white/80">THÀNH VIÊN</a>
+        <a href="#" className="hover:text-white/80">DỊCH VỤ KHÁC</a>
       </div>
-    </header>
+    </nav>
   );
 }
