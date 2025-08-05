@@ -1,21 +1,39 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "PF BEAU SANS FS";
-  src: url("/deemcafe/public/fonts/PFBEAUSANS/FSPFBeauSansPro-Bbook.ttf") format("truetype");
-  font-weight: 400;
+  font-family: 'BEAUSANS';
+  src: local('PF Beau Sans Pro Black'), local('PF-Beau-Sans-Pro-Black'),
+    url('/fonts/PFBEAUSANS/PFBeauSansPro-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
-  font-family: "PF BEAU SANS FS";
-  src: url("/deemcafe/public/fonts/PFBEAUSANS/FSPFBeauSansPro-Regular.ttf") format("truetype");
+  font-family: 'BEAUSANS';
+  src: local('PF Beau Sans Pro'), local('PF-Beau-Sans-Pro'),
+    url('/fonts/PFBeauSansPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'BEAUSANS';
+  src: local('PF Beau Sans Pro BBook'), local('PF-Beau-Sans-Pro-BBook'),
+    url('/fonts/PF-Beau-Sans-Pro-BBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'BEAUSANS';
+  src: local('PF Beau Sans Pro Bold'), local('PF-Beau-Sans-Pro-Bold'),
+    url('/fonts/PFBeauSansPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: bold;
 }
 
-@theme{
+
+@theme {
   --font-display: "beauSans", "sans-serif";
 }
 
@@ -55,4 +73,8 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: white;
+}
+
+.beausans {
+
 }

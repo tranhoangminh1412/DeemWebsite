@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/old/Footer";
 import Image from "next/image";
 import KhungNganFooter from "@/assets/KhungNganFooter.jpg";
+import { NavbarProvider } from "@/contexts/NavbarContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +31,15 @@ export default function RootLayout({ children }) {
       >
         {/* Wrap the page content with AuthProvider */}
         <AuthProvider>
-          <div className="min-h-screen bg-transparent text-white">
-            <div className="flex w-full">
-              <Navbar />
+          <NavbarProvider>
+            <div className="min-h-screen bg-transparent text-white">
+              <div className="flex w-full">
+                <Navbar />
+              </div>
+              {children}
+
             </div>
-            {children}
-            
-          </div>
+          </NavbarProvider>
         </AuthProvider>
       </body>
     </html>
