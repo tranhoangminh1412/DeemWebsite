@@ -3,8 +3,9 @@ import Image from "next/image";
 import bgImage from "@/assets/backgroundSanPham.png";
 import HeroText from "@/components/HeroText";
 import HeroContent from "@/components/HeroContent";
+import BottomMegaMenu from "@/components/BottomMegaMenu";
 
-export default function AboutUs() {
+export default function Products() {
     return (
         <div className="relative w-screen h-screen overflow-hidden brightness-120">
             {/* Background image */}
@@ -31,6 +32,9 @@ export default function AboutUs() {
             </div>
             {/* Optional dark overlay */}
             <div className="absolute inset-0 bg-black/18 z-0" />
+
+            {/* Floating bottom menu */}
+            <BottomMegaMenu />
         </div>
     );
 }
